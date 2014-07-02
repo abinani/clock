@@ -1,4 +1,6 @@
 <?php 
+date_default_timezone_set('America/New_York');
+
 $morning = mktime(5);
 $afternoon = mktime(11);
 $evening = mktime(12+4);
@@ -12,13 +14,11 @@ if($current >= $morning && $current < $afternoon) {
     $img = "php-morning.png";
     $class_value = "morning";
 }
-else if($current >= $afternoon && $current < $evening)
-{
+else if($current >= $afternoon && $current < $evening) {
     $img = "php-afternoon.png";
     $class_value = "afternoon";
 }
-else if($current >= $evening && $current < $night)
-{
+else if($current >= $evening && $current < $night) {
    $img = "php-evening.png";
    $class_value = "evening";
 }
